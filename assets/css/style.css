@@ -1,0 +1,121 @@
+
+body {
+    background-color: orangered;
+    margin: 0;
+    font-family: rubik;
+    color: white;
+  }
+
+
+  .container {
+    padding: 40px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 54px;
+  }
+
+
+  .card {
+    list-style: none;
+    padding: 40px;
+    background-color: #f4f4f4;
+    color: #222;
+    text-align: center;
+  }
+  .card-title {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+  .card-subtitle {
+    font-weight: lighter;
+    color: #666;
+    margin-top: 5px;
+  }
+  .card-image {
+    height: 180px;
+  }
+
+  #pokedex {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .card:hover {
+    animation: bounce 0.5s linear;
+  }
+
+  @keyframes bounce {
+    20% {
+      transform: translateY(-6px);
+    }
+    40% {
+      transform: translateY(0px);
+    }
+    60% {
+      transform: translateY(-2px);
+    }
+    80% {
+      transform: translateY(-0px);
+    }
+  }
+    
+
+
+
+
+#modal-overlay{
+    background-color: aquamarine;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+#modal{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    min-height: 300px;
+    background-color: black;
+    border-radius: 11px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+#modal span#close-modal{
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: gray;
+    padding: 5rem;
+    border-radius: 0 11px 0 11px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+}
+
+#modal span#close-modal:hover{
+
+}
+
+#modal img{
+    object-fit: cover;
+    object-position: center;
+    border-radius: .5rem 0 0 .5rem;
+}
